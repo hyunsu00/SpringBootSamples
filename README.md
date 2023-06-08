@@ -54,7 +54,34 @@ $ sudo apt-get purge openjdk*
 
 ## 5. 프로젝트 생성 및 실행
 1. [Ctrl + Shift + P] => ‘Spring initalizr: Create a Gradle Project’ 선택
-1. 
+2. 
+<br/>
+
 ## 참고)
 1. [Spring Boot](https://spring.io/)  
-1. [Spring Boot Extension in VS Code](https://www.youtube.com/watch?v=ZNsEVrE9NW0&t=478s)
+2. [Spring Boot Extension in VS Code](https://www.youtube.com/watch?v=ZNsEVrE9NW0&t=478s)
+<br/>
+
+## [회사의 윈도우용 SSL 인증서를 WSL ubuntu에 설치하기](https://nameng.tistory.com/139)
+```powershell
+PS> certmgr.msc
+# 신뢰할 수 있는 루트인증 기관 → 인증서 -> HC_SSL 더블클릭 -> 자세히 -> 파일에 복사(C)... 
+# -> DER로 인코닝된 바이너리 X.509(.CER)(D) -> HC_SSL.cer 내보내기
+# WSL 경로에 HS_SSL.cer 복사
+```
+```bash
+# WSL
+$ sudo openssl x509 -inform DEM -in HC_SSL.cer -out ./HC_SSL.crt
+$ sudo mkdir /usr/share/ca-certificates/extra
+$ sudo cp -rf HC_SSL.crt /usr/share/ca-certificates/extra/
+$ sudo chmod 644 /usr/share/ca-certificates/extra/*
+$ sudo dpkg-reconfigure ca-certificates
+# extra/HC_SSL.crt 체크후 <OK>
+```
+
+
+
+
+
+
+<OK     >
