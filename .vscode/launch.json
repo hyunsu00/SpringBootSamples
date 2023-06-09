@@ -12,12 +12,24 @@
         },
         {
             "type": "java",
-            "name": "SpringBootOfVsCodeApplication",
+            "name": "Spring Boot-SpringBootOfVsCodeApplication<spring-boot-of-vs-code>",
             "request": "launch",
+            "cwd": "${workspaceFolder}/spring-boot-of-vs-code",
             "mainClass": "io.honeymon.boot.springboot.vscode.springbootofvscode.SpringBootOfVsCodeApplication",
             "projectName": "spring-boot-of-vs-code",
             "args": "",
             "envFile": "${workspaceFolder}/spring-boot-of-vs-code/.env",
+            "vmArgs": "-Xmx2G -Xms512M"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<demo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/demo",
+            "mainClass": "com.example.demo.DemoApplication",
+            "projectName": "demo",
+            "args": "",
+            "envFile": "${workspaceFolder}/demo/.env",
             "vmArgs": "-Xmx2G -Xms512M"
         }
     ]
