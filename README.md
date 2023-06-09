@@ -49,17 +49,37 @@ $ sudo apt-get purge openjdk*
 1. [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)  
 2. [Spring Boot Extension Pack](https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack)
 3. [Lombok Annotations Support for VS Code](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-lombok)  
+4. [Gradle for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-gradle) 
 <br/>
 
 
 ## 5. 프로젝트 생성 및 실행
-1. [Ctrl + Shift + P] => ‘Spring initalizr: Create a Gradle Project’ 선택
-2. 
+1. [Ctrl + Shift + P] => ‘Spring initalizr: Create a Gradle Project’
+2. Spring Boot version 선택: 예) 3.0.7
+3. Project language 선택: 예) Java
+4. Group Id 등록: 예) io.honeymon.boot.springboot.vscode
+5. Artifact Id 등록: 예) spring-boot-of-vs-code
+6. Packaging type 선택: 예) Jar
+7. Java Version 선택: 예) 17
+8. Dependnecies 선택: 예)
+    - Spring Boot DevTools
+    - Lombok
+    - Spring Configuration Processor
+    - Spring Web
+    - Spring Data JPA
+    - H2 Database
+    - Flyway Migration
+    - MariaDB Driver
+9. 저장소 생성위치 지정
 <br/>
 
 ## 참고)
-1. [Spring Boot](https://spring.io/)  
-2. [Spring Boot Extension in VS Code](https://www.youtube.com/watch?v=ZNsEVrE9NW0&t=478s)
+- [Spring](https://spring.io/)  
+- [Spring initializr](https://start.spring.io/)
+- [Running and debugging Java](https://code.visualstudio.com/docs/java/java-debugging) 
+- [Spring Boot in Visual Studio Code](https://code.visualstudio.com/docs/java/java-spring-boot)
+- [Visual Studio Code 개발환경 세팅](https://www.youtube.com/watch?v=ZNsEVrE9NW0&t=478s)
+- [Visual Studio Code 에서 스프링 부트 프로젝트 개발하기](http://honeymon.io/tech/2021/01/06/use-vs-code-for-spring-boot.html)
 <br/>
 
 ## [회사의 윈도우용 SSL 인증서를 WSL ubuntu에 설치하기](https://nameng.tistory.com/139)
@@ -78,10 +98,3 @@ $ sudo chmod 644 /usr/share/ca-certificates/extra/*
 $ sudo dpkg-reconfigure ca-certificates
 # extra/HC_SSL.crt 체크후 <OK>
 ```
-
-
-
-
-
-
-<OK     >
